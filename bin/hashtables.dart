@@ -36,6 +36,7 @@ void main() {
   students.insert(Student(2023096, 'TA'));
   students.insert(Student(2022007, 'UM'));
   students.insert(Student(2024007, 'VG'));
+  
   // studentList[2024078] = Student(2024078, 'AZ1');
   // studentList[2024077] = Student(2024077, 'AZ2');
   // studentList[2021018] = Student(2021018, 'AD');
@@ -80,6 +81,31 @@ void main() {
   // };
 
   // final studentName = studentSearch(studentList, 2024008);
-  final studentName = students.getStudent(2024007);
-  print(studentName);
+
+  // final studentName = students.getStudent(2024007);
+  // print(studentName);
+
+  // final word = 'cat';
+  // print(word.hashCode);
+  // final arraySize = 200;
+  // final index = word.hashCode % arraySize;
+  // print(index);
+
+  Map<int, String> idToNameMap = {
+    2020478: 'AZ1',
+    2024077:'AZ2',
+    2021018: 'AD' 
+  };
+
+  final name = idToNameMap[2021018];
+  print(name);
+
+  Map<String, int> nameToIdMap = {
+    'AZ1': 2024078,
+    'AZ2': 2024077,
+    'AD': 2021018
+  };
+
+  final id = nameToIdMap['AZ2'];
+  print(id);
 }
